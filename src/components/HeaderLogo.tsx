@@ -1,9 +1,6 @@
 'use client'
 
-import SiteLogoIcon from '@/components/SiteLogoIcon'
-import { useSiteIdentity } from '@/hooks/useSiteIdentity'
-import { Link } from '@/i18n/navigation'
-import { cn } from '@/lib/utils'
+import Link from '@/i18n/navigation'
 
 interface HeaderLogoProps {
   labelSuffix?: string
@@ -20,5 +17,4 @@ export default function HeaderLogo({ labelSuffix }: HeaderLogoProps) {
       </span>
     </Link>
   )
-}
 }
