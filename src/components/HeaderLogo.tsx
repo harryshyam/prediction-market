@@ -10,25 +10,15 @@ interface HeaderLogoProps {
 }
 
 export default function HeaderLogo({ labelSuffix }: HeaderLogoProps) {
-  const site = useSiteIdentity()
-  const label = labelSuffix ? `${site.name} ${labelSuffix}` : site.name
-
   return (
     <Link
       href="/"
-      className={cn(
-        `flex h-10 shrink-0 items-center gap-2 text-2xl font-medium text-foreground transition-opacity hover:opacity-80`,
-      )}
+      className="flex h-10 shrink-0 items-center gap-2 text-2xl font-black tracking-wider transition-opacity hover:opacity-90"
     >
-      <SiteLogoIcon
-        logoSvg={site.logoSvg}
-        logoImageUrl={site.logoImageUrl}
-        alt={`${site.name} logo`}
-        className="size-[1em] text-current [&_svg]:size-[1em] [&_svg_*]:fill-current [&_svg_*]:stroke-current"
-        imageClassName="size-[1em] object-contain"
-        size={32}
-      />
-      <span>{label}</span>
+      <span className="bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-600 bg-clip-text text-transparent">
+        SOLOMON
+      </span>
     </Link>
   )
+}
 }
